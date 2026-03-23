@@ -1,0 +1,102 @@
+        :root {
+            --dark-green: #051611;
+            --emerald-gold: #c5a358;
+            --soft-white: #f4f7f5;
+            --deep-black: #020a08;
+        }
+        body {
+            background-color: var(--dark-green);
+            color: var(--soft-white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(19, 62, 50, 0.4) 0%, rgba(5, 22, 17, 1) 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: var(--emerald-gold);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #c5a358, #efd18d, #c5a358);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold {
+            background: var(--emerald-gold);
+            color: var(--dark-green);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: #efd18d;
+            box-shadow: 0 0 25px rgba(197, 163, 88, 0.3);
+            transform: scale(1.02);
+        }
+
+        .section-padding { padding: 120px 0; }
+        html { scroll-behavior: smooth; }
+
+        /* Ticker Animation */
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .ticker-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ticker-wrapper {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 25px 50px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: rgba(197, 163, 88, 0.7);
+            font-weight: 600;
+        }
+
+        /* Project Form Styles */
+        .project-input {
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            padding: 15px 0;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            transition: border-color 0.3s ease;
+        }
+        .project-input:focus {
+            outline: none;
+            border-bottom-color: var(--emerald-gold);
+        }
+        .project-label {
+            display: block;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--emerald-gold);
+            margin-top: 20px;
+            font-weight: 800;
+        }
